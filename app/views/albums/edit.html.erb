@@ -1,0 +1,12 @@
+
+<h1>Edit Photo Album</h1>
+
+<%= form_for @album do |form| %>
+	<%= form.label :name %>
+	<%= form.text_field :name %>
+
+	<p>
+		<%= form.submit %>
+	</p>
+
+<% end %>	

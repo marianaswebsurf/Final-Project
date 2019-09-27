@@ -1,9 +1,14 @@
 
+<%= link_to 'Logout', destroy_user_session_path , method: :delete %>
 
-<h1>Show page</h1>
+<h1><%= @album.name %></h1> 
+
 
 <% if @album.images.attached? %>
 	<% @album.images.each do |image| %>
 	<%= image_tag image %>
    <% end %>
  <% end %>	
+
+<%= link_to 'Edit', edit_album_path %>
+<%= link_to 'delete', album_path, method: :delete %>

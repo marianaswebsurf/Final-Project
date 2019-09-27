@@ -1,10 +1,10 @@
 
 
-<h1>Album has photos</h1>
+<h1>Planet of Bands</h1>
 
 <% if current_user %>
 
-		<%= link_to 'New', new_album_path %>
+		<%= link_to 'create photo album', new_album_path %>
 
 		<%= link_to 'Logout', destroy_user_session_path , method: :delete %>
 
@@ -14,4 +14,4 @@
 
 		<%= link_to 'Login', user_session_path %>
 
-	<% end %>		
+<% end %>		
