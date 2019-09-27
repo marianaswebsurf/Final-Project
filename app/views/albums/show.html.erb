@@ -1,0 +1,9 @@
+
+
+<h1>Show page</h1>
+
+<% if @album.images.attached? %>
+	<% @album.images.each do |image| %>
+	<%= image_tag image %>
+   <% end %>
+ <% end %>	

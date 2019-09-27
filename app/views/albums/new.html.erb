@@ -1,0 +1,23 @@
+
+
+<h1>New</h1>
+
+
+
+
+<%= form_for @album do |form| %>
+	
+	<p>
+		<%= form.file_field :images, multiple: true %> 
+	</p>
+
+	<p>
+		<%= form.label :name %><br>
+		<%= form.text_field :name %>
+	</p>
+
+	<p>
+	<%= form.submit 'Enter' %>
+	</p>
+
+<% end %>
