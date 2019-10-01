@@ -25,6 +25,23 @@ class AlbumsController < ApplicationController
 		@album = Album.find(params[:id])
 	end
 
+	def add
+		@album = Album.find(params[:id])
+
+		if @album.update(album_params)
+
+			redirect_to @album
+		else
+			render :add
+		end
+
+		# if @album.images.attach(params[:images])
+		# 	redirect_to @album
+		# else
+		#    render :add
+		# end
+	end
+
 	def update
 		@album = Album.find(params[:id])
 
@@ -34,6 +51,12 @@ class AlbumsController < ApplicationController
 		else
 			render :edit
 		end
+	end
+
+	def delete_image_attachment
+	  @image = ActiveStorage::Blob.find_signed(params[:id])
+      @image.attachments.first.purge
+      redirect_back(fallback_location: album_path)
 	end
 
 	def destroy

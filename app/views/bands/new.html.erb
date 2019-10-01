@@ -1,0 +1,34 @@
+
+<p>Tell about your band</p>
+
+<%= form_for @band do |form| %>
+	<p>
+		<%= form.label :name %><br>
+		<%= form.text_field :name %>
+	</p>
+
+	<p>
+		<%= form.label :since %><br>
+		<%= form.text_field :since %>
+	</p>
+
+	<p>
+		<%= form.label :genre %><br>
+		<%= form.text_field :genre %>
+	</p>
+
+	<p>
+		<%= form.label :region %><br>
+		<%= form.text_field :region %>
+	</p>
+
+	<p>
+		<%= form.label :description %><br>
+		<%= form.text_field :description %>
+	</p>
+
+	<p>
+		<%= form.submit 'Enter' %>
+	</p>
+
+<% end %>

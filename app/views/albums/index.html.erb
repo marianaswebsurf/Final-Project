@@ -3,6 +3,18 @@
 <h1>Planet of Bands</h1>
 
 <% if current_user %>
+		
+		<%= link_to 'Band Profile', profile_path %>
+
+		<%= link_to 'Popular Band', popularband_path %>
+
+		<%= link_to 'Music Collection', music_path %>
+
+		<%= link_to 'Store' , store_path %>
+
+		<%= link_to 'About', about_path %><br><br>
+
+		<%= link_to 'register your band', new_band_path %>
 
 		<%= link_to 'create photo album', new_album_path %>
 
@@ -10,8 +22,8 @@
 
 	<% else %> 
 
-		<%= link_to 'Register', new_user_registration_path %>
-
 		<%= link_to 'Login', user_session_path %>
+
+		<%= link_to 'Register', new_user_registration_path %>
 
 <% end %>		

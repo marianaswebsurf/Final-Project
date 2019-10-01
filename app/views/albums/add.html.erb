@@ -1,0 +1,15 @@
+
+
+<h1>add new photo</h1>
+
+
+<%= form_for @album do |form| %>
+	<p>
+		<%= form.file_field :images, multiple: true %> 
+	</p>
+
+	<p>
+	<%= form.submit 'Enter' %>
+	</p>
+
+<% end %>
