@@ -35,11 +35,15 @@ class BandsController < ApplicationController
 		end
 	end
 
+	def more
+		@band = Band.all
+	end
+
 	def destroy 
 		@band = Band.find(params[:id])
 
 		if @band.destroy
-			redirect_to root_url
+			redirect_to bands_url
 		else
 			redirect_to @band
 		end

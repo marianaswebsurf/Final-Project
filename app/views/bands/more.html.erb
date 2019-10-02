@@ -1,0 +1,14 @@
+
+
+<h1>Post your band show</h1>
+
+<%= form_for @band do |form| %>
+	<p>
+		<%= form.label :name %>
+		<%= form.text_field :name %>
+	</p>
+
+	<p>
+		<%= form.submit 'Enter' %>
+	</p>
+<% end %>

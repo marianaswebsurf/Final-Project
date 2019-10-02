@@ -1,8 +1,9 @@
-<%= link_to 'Home', albums_path %>
 
 <h1>Upload photo</h1>
 
 <%= form_for @album do |form| %>
+
+	<%= link_to 'Home', albums_path %>
 
 	<%= link_to 'Logout', destroy_user_session_path , method: :delete %>
 	

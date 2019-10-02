@@ -1,6 +1,32 @@
 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Planet of Bands</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/albums">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">Band Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/bands/new">Band Registeration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users/sign_out">LOGOUT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<h1>Planet of Bands</h1>
+<!-- <h1>Planet of Bands</h1>
 
 <% if current_user %>
 		
@@ -14,9 +40,7 @@
 
 		<%= link_to 'About', about_path %><br><br>
 
-		<%= link_to 'register your band', new_band_path %>
-
-		<%= link_to 'create photo album', new_album_path %>
+		<%= link_to 'Band Registeration', new_band_path %>
 
 		<%= link_to 'Logout', destroy_user_session_path , method: :delete %>
 
@@ -26,4 +50,4 @@
 
 		<%= link_to 'Register', new_user_registration_path %>
 
-<% end %>		
+<% end %>		 -->

@@ -34,12 +34,6 @@ class AlbumsController < ApplicationController
 		else
 			render :add
 		end
-
-		# if @album.images.attach(params[:images])
-		# 	redirect_to @album
-		# else
-		#    render :add
-		# end
 	end
 
 	def update

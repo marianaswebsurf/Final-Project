@@ -1,12 +1,46 @@
 
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Upload Photo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Show</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Delete Profile</a>
+      </li>
+  </ul>
+</div>
 
-<%= link_to 'create photo album', new_album_path %>
+<div style="margin-top: 20px;padding-left: 10px;">
+<h1>Band Profile</h1>
 
-<h1>Show all about the Band</h1>
 
-<p><%= @band.name %></p>
-<p><%= @band.since %></p>
-<p><%= @band.genre %></p>
-<p><%= @band.region %></p>
-<p><%= @band.description %></p>
+<%= link_to 'Home', albums_path %>
+<%= link_to 'Edit Profile', edit_band_path %>
+<%= link_to 'Upload Photo', new_album_path %>
+<%= link_to 'Show', more_path %><br><br>
+<%= link_to 'Delete Profile', band_path(@band), method: :delete %><br>
+
+	<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+	<div class="card-body">
+	<p class >Band Name : <%= @band.name %></p>
+
+	<p class>Band Established : <%= @band.since %></p>
+
+	<p class>Genre : <%= @band.genre %></p>
+
+	<p class>Region : <%= @band.region %></p>
+
+	<p class>Description :<%= @band.description %></p>
+	</div>
+	</div>
+</div>
 

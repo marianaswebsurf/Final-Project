@@ -9,6 +9,8 @@ Rails.application.routes.draw do
    	end
    end
 
+   get '/more/', to: 'bands#more', as: 'more'
+
    get '/website/', to: 'pages#website', as: 'website'
 
    get '/music/', to: 'pages#music', as: 'music'

@@ -1,34 +1,37 @@
-
-<p>Tell about your band</p>
+<div style="margin-top: 20px; padding-left: 10px;">
+<p style="font-family: 'Fredoka One', cursive; font-size: 25px;">People want to know your band</p>
 
 <%= form_for @band do |form| %>
 	<p>
-		<%= form.label :name %><br>
-		<%= form.text_field :name %>
+		<%= form.label :name, style:"font-family: 'Fredoka One', cursive;" %><br>
+		<%= form.text_field :name, class: 'form-control col-sm-3' %>
 	</p>
 
 	<p>
-		<%= form.label :since %><br>
-		<%= form.text_field :since %>
+		<%= form.label :since, style:"font-family: 'Fredoka One', cursive;" %><br>
+		<%= form.text_field :since, class: 'form-control col-sm-3' %>
 	</p>
 
 	<p>
-		<%= form.label :genre %><br>
-		<%= form.text_field :genre %>
+		<%= form.label :genre, style:"font-family: 'Fredoka One', cursive;" %><br>
+		<%= form.text_field :genre, class: 'form-control col-sm-3' %>
 	</p>
 
 	<p>
-		<%= form.label :region %><br>
-		<%= form.text_field :region %>
+		<%= form.label :region, style:"font-family: 'Fredoka One', cursive;" %><br>
+		<%= form.text_field :region, class: 'form-control col-sm-3' %>
 	</p>
 
 	<p>
-		<%= form.label :description %><br>
-		<%= form.text_field :description %>
+		<%= form.label :description, style:"font-family: 'Fredoka One', cursive;" %><br>
+		<%= form.text_field :description, class: 'form-control col-sm-3' %>
 	</p>
 
 	<p>
-		<%= form.submit 'Enter' %>
+		<%= form.submit 'Enter', class: 'btn btn-success' %>
 	</p>
 
 <% end %>
+</div>
+
+  
