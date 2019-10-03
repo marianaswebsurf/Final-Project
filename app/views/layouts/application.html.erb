@@ -8,14 +8,66 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-  
   </head>
 
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Planet of Bands</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+        
+          <% if current_user %>
+            <li class="nav-item">
+              <%= link_to 'Band Registeration', new_band_path, class: 'nav-link' %>
+            </li>
 
-    <%= yield %>
+            <li class="nav-item">
+            <%= link_to 'Logout', destroy_user_session_path , method: :delete, class: 'nav-link' %>
+            </li>
+
+          <% else %>
+
+            <li class="nav-item">
+              <%= link_to 'Login', user_session_path, class: 'nav-link' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Register', new_user_registration_path, class: 'nav-link' %>
+            </li>
+
+          <% end %> 
+        
+            <li class="nav-item">
+              <%= link_to 'Store' , store_path, class: 'nav-link' %>
+            </li>    
+            <li class="nav-item">
+              <%= link_to 'Bands', bands_path, class: 'nav-link' %>
+            </li>  
+
+            <li class="nav-item">
+              <%= link_to 'Popular Band', popularband_path, class: 'nav-link' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Music Collection', music_path, class: 'nav-link' %>
+            </li>  
+            <li class="nav-item">
+              <%= link_to 'About', about_path, class: 'nav-link' %>
+            </li>
+
+        </ul>
+      </div>
+    </nav>
 
     <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-  
+    <p class="alert"><%= alert %></p>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>

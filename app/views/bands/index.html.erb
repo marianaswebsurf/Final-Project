@@ -1,5 +1,13 @@
 
-<h1>Band site</h1>
+<h1>Check All Bands</h1>
 
 
-
+<% if @band.any? %>
+	<% @band.each do |band| %>
+		<div class="card">
+			<div class="card-body">
+				<%= link_to band.name, band_path(band) %>
+			</div>
+		</div>
+	<% end %>
+<% end %>
